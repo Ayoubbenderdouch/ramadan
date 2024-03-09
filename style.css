@@ -1,0 +1,181 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  text-decoration: none;
+}
+.hero {
+  background: url(img/bg.png);
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+}
+.hero header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.hero header nav {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+.hero header nav .logo {
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+}
+.hero header nav .links a {
+  font-size: 22px;
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 30px;
+  position: relative;
+}
+.hero header nav .links a::before {
+content: "";
+position: absolute;
+top: 100%;
+left: 0;
+width: 0%;
+height: 2px;
+background-color: white;
+transition: .4s;
+}
+.hero header nav .links a:hover::before {
+  width: 100%;
+
+}
+.hero header nav .links .btn-menu {
+  color: white;
+  font-size: 30px;
+  margin-left: 30px;
+  cursor: pointer;
+}
+.hero header nav .links .btn-menu:hover {
+color: aqua; 
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  gap: 10%;
+
+}
+.container .div-text {
+  width: 50%;
+}
+.container .div-img {
+width: 30%;
+}
+.container .div-img img {
+  width: 80%;
+}
+
+.container .div-text h1 {
+  font-size: 40px;
+  color: white;
+}
+.container .div-text p {
+  color: #c0bebe;
+  line-height: 1.5;
+  margin: 20px 0 40px 0;
+
+}
+.container .div-text .btn {
+color: white;
+font-size: 18px;
+text-transform: uppercase;
+border: 2px solid white;
+padding: 14px 35px;
+border-radius: 30px;
+transition: 0.5s;
+}
+.container .div-text .btn:hover {
+  background-color: white;
+  color: rgb(133, 17, 151);
+}
+@media only screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    gap: 0;
+  }
+  .container .div-text {
+    width: 80%;
+    text-align: center;
+  }
+  .container .div-img {
+    width: 80%;
+  }
+  .container .div-img img {
+    width: 100%;
+  }
+  .hero header nav .links {
+    display: none;
+  }
+  .hero header nav .links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  .hero header nav .links.active a {
+    margin: 10px 0;
+  }
+  .hero header nav .links.active a::before {
+    width: 0;
+  }
+  .hero header nav .links .btn-menu {
+    display: block;
+  }
+  .hero header nav .links .btn-menu.active {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .container .div-text h1 {
+    font-size: 30px;
+  }
+  .container .div-text p {
+    font-size: 15px;
+  }
+  .container .div-text .btn {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .container .div-text h1 {
+    font-size: 25px;
+  }
+  .container .div-text p {
+    font-size: 13px;
+  }
+  .container .div-text .btn {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 200px) {
+  .container .div-text h1 {
+    font-size: 20px;
+  }
+  .container .div-text p {
+    font-size: 10px;
+  }
+  .container .div-text .btn {
+    font-size: 10px;
+  }
+}
